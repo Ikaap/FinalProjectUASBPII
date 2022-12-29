@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/Cream"
+    tools:context=".view.auth.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_back_login"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_baseline_arrow_back"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/Brown_text_login"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        />
+
+
+        <EditText
+            android:id="@+id/edtUnameKasir"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:textColorHint="@color/Brown_hint_login"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textColorHint="@color/Brown_hint_login"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:textColor="@color/Brown_btn_textLogin"
+        />
+
+
+</LinearLayout>

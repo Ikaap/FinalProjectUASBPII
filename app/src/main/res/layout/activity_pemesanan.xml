@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cream"
+    android:orientation="vertical"
+    tools:context=".view.pemesanan.PemesananActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/ketPemesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal"
+            android:text="Pemesanan"
+            android:textColor="@color/Brown_text_login"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutKasir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ketPemesanan">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kasir : "
+                android:textSize="20sp"
+                android:textColor="@color/Brown_text_login"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/namaKasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="uname kasir"
+                android:textSize="20sp"
+                android:textColor="@color/Brown_text_login"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ketDataProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Data Produk"
+            android:textColor="@color/Brown_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutKasir" />
+
+
+        <EditText
+            android:id="@+id/edtNamaProduk"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:hint="Nama Produk"
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/Brown_hint_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ketDataProduk" />
+
+        <EditText
+            android:id="@+id/edtHargaProduk"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:hint="Harga Produk"
+            android:inputType="number"
+            android:textColorHint="@color/Brown_hint_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNamaProduk" />
+
+        <EditText
+            android:id="@+id/edtJumlahProduk"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah"
+            android:inputType="number"
+            android:textColorHint="@color/Brown_hint_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtHargaProduk" />
+
+        <TextView
+            android:id="@+id/tvKetDatalain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Data Lainnya"
+            android:textColor="@color/Brown_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtJumlahProduk" />
+
+        <EditText
+            android:id="@+id/edtNamaCus"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Nama Customer"
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/Brown_hint_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvKetDatalain" />
+
+        <EditText
+            android:id="@+id/edtNoMeja"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="No Meja "
+            android:inputType="number"
+            android:textColorHint="@color/Brown_hint_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNamaCus" />
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Insert"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNoMeja" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="dummy"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNoMeja" />
+
+
+        <TextView
+            android:id="@+id/ketList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List Pemesanan"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Brown_hint_login"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnInsert"/>
+
+        <ListView
+            android:id="@+id/listPemesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ketList"
+            tools:listitem="@layout/list_items_pesan" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

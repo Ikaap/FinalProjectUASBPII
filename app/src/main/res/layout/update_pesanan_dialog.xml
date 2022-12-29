@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/updateNamaProduk"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:hint="Nama Produk"
+        android:inputType="text"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/Brown_hint_login" />
+
+    <EditText
+        android:id="@+id/updateHargaProduk"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:hint="Harga Produk"
+        android:inputType="number"
+        android:textColorHint="@color/Brown_hint_login"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/updateJumlahProduk"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Jumlah"
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:textColorHint="@color/Brown_hint_login" />
+
+    <EditText
+        android:id="@+id/updateNamaCus"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:hint="Nama Customer"
+        android:inputType="text"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/Brown_hint_login" />
+
+    <EditText
+        android:id="@+id/updateNoMeja"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:hint="No Meja"
+        android:inputType="number"
+        android:textColorHint="@color/Brown_hint_login"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/updateNamaKasir"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:hint="Nama Kasir"-->
+<!--        android:inputType="number"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textColorHint="@color/Brown_hint_login" />-->
+
+
+</LinearLayout>
