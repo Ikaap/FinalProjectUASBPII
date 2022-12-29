@@ -1,7 +1,5 @@
 package com.ikapurwanti.finalprojectuasbpii.model
 
-import android.widget.TextView
-
 data class Pemesanan(
     val id: Int,
     val cus: String,
