@@ -51,9 +51,6 @@ class PemesananActivity : AppCompatActivity() {
 
         setNamaKasir.text = getKasir
 
-        totalBayar()
-
-
         setUpListData()
         Log.e("work", setUpListData().toString())
 
@@ -62,19 +59,10 @@ class PemesananActivity : AppCompatActivity() {
         }
     }
 
-    private fun totalBayar(){
-        val hargaProduk = edtHargaPro.text.toString().trim()
-        val jumlahProduk = edtJumlahPro.text.toString().trim()
-
-        val totalBayar = hargaProduk.toDouble() * jumlahProduk.toDouble()
-
-         tvTotal.text = totalBayar.toString()
-
-    }
-
     private fun addRecord(view: View) {
 
         val namaProduk = edtNamaPro.text.toString()
+        //ini sudah masuk disini
         val hargaProduk = edtHargaPro.text.toString()
         val jumlahProduk = edtJumlahPro.text.toString()
         val namaCustomer = edtNamaCus.text.toString()
@@ -88,17 +76,23 @@ class PemesananActivity : AppCompatActivity() {
             edtJumlahPro.error = "Inputkan Jumlah Produk"
             edtNamaCus.error = "Inputkan Nama Customer"
             edtNoMeja.error = "Inputkan Nomor Meja"
-        } else if (namaProduk.isEmpty()){
+        }
+        else if (namaProduk.isEmpty()){
             edtNamaPro.error = "Inputkan Nama Produk"
-        } else if (hargaProduk.isEmpty()){
+        }
+        else if (hargaProduk.isEmpty()){
             edtHargaPro.error = "Inputkan Harga Produk"
-        } else if (jumlahProduk.isEmpty()){
+        }
+        else if (jumlahProduk.isEmpty()){
             edtJumlahPro.error = "Inputkan Jumlah Produk"
-        }  else if (namaCustomer.isEmpty()){
+        }
+        else if (namaCustomer.isEmpty()){
             edtNamaCus.error = "Inputkan Nama Customer"
-        } else if (noMeja.isEmpty()){
+        }
+        else if (noMeja.isEmpty()){
             edtNoMeja.error = "Inputkan Nomor Meja"
-        }  else {
+        }
+        else {
             val status = databaseHelper.addPemesanan(
                 Pemesanan(0, namaCustomer, Integer.parseInt(noMeja), namaProduk, Integer.parseInt(hargaProduk), Integer.parseInt(jumlahProduk),
                     namaKasir
@@ -117,8 +111,10 @@ class PemesananActivity : AppCompatActivity() {
                 Toast.makeText(this, "Tidak Berhasil Ditambahkan Ke Database", Toast.LENGTH_LONG).show()
             }
         }
-    }
 
+        val totalBayar = hargaProduk.toInt() * jumlahProduk.toInt()
+        tvTotal.text = totalBayar.toString()
+    }
 
     private fun setUpListData(){
         if(getItemList().size > 0){
